@@ -703,10 +703,6 @@ margin on the iframe, cause it breaks stuff. */
 .home-template .page-title {
 }
 .home-template .page-description {
-    -webkit-animation: fade-in-down 0.9s;
-    animation: fade-in-down 0.9s;
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s;
 }
 
 /* Every post, on every page, gets this style on its <article> tag */

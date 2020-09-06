@@ -5,10 +5,10 @@ meta_description: "Älgjakt i vittjärv"
 markdown: kramdown
 highlighter: rouge
 logo: false
-paginate: 15
+paginate: 10
 baseurl: ""
 domain_name: ""
-google_analytics: "UA-XXXXXXXX-X"
+google_analytics: "UA-18998977-1"
 plugins: [jekyll-paginate]
 
 # Details for the RSS feed generator
