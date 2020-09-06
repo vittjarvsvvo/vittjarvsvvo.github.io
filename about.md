@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About me 
+title: Om detta
 ---
 
-This is a static page. It could be an 'about page' if you'd like.
+Vittjärvs viltvårdsområde bedriver viltvård i Boden, Norrbotten.
