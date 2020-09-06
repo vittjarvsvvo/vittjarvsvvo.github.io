@@ -10,6 +10,7 @@ baseurl: ""
 domain_name: ""
 google_analytics: "UA-18998977-1"
 plugins: [jekyll-paginate]
+permalink: /:categories/:year/:month/:title:output_ext
 
 # Details for the RSS feed generator
 url: ""
