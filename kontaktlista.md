@@ -57,6 +57,10 @@ title: Kontaktlista & Dokument
             callback(new Error());
         };
     }
+
+    var form = document.querySelector('form');
+    var secret = getCookie('pwd');
+
     function onSubmit(event) {
         event.preventDefault();
         var value = document.querySelector('#password').value;
@@ -68,12 +72,13 @@ title: Kontaktlista & Dokument
         httpGet('/assets/' + secret + '.txt', function(err, data) {
             if (data) {
                 document.querySelector('#data').innerHTML = b64_to_utf8(data);
-                document.querySelector('form').style.display = 'none';
+                form.style.display = 'none';
             }
+            else
+                form.style.display = 'block';
+
         });
     }
-    var secret = getCookie('pwd');
-    var form = document.querySelector('form');
     if (!secret)
         form.style.display = 'block';
     else {
