@@ -51,7 +51,7 @@ post_class: post-template
 
         {% if page.archive %}
         <section class="archive">
-            <h5>Akriv</h5>
+            <h5>Arkiv</h5>
             <ul>
                 {% for post in site.posts %}
                     <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url  | relative_url}}">{{ post.title }}</a></li>
