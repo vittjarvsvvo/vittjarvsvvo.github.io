@@ -4,8 +4,6 @@ title: Beslut från stämman
 tags: []
 ---
 
-Beslut från stämman:
-
 - Tider för älgjakten lör 4 sep - 6 sep, 9 - 12 sep och därefter helger
 - Jakt under veckor med anmälan senast 12 dagen före får ske från Oktober
 - Sista anmälan till älgjakten sker söndag 29 aug 15:00 i slakthuset, ta med arrendebevis och skjutintyg
