@@ -746,7 +746,12 @@ body:not(.post-template) .post-title {
 }
 
 .post-title a {
+    color: #777;
     text-decoration: none;
+}
+
+.post-recent .post-title a {
+    color: #4A4A4A;
 }
 
 .post-excerpt p {

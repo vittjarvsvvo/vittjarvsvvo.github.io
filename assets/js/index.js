@@ -33,6 +33,7 @@
         };
 
     $document.ready(function () {
+        var recentThresholdMs = 60 * 24 * 60 * 60 * 1000;
 
         var $postContent = $(".post-content");
         $postContent.fitVids();
@@ -49,6 +50,27 @@
             }
         }
 
+        function markRecentPosts() {
+            $("[data-post-date]").each(function () {
+                var $item = $(this),
+                    postDate = new Date($item.attr("data-post-date")),
+                    postAgeMs = Date.now() - postDate.getTime(),
+                    $time = $item.find(".post-date").first();
+
+                if (!isNaN(postDate.getTime()) && postAgeMs <= recentThresholdMs) {
+                    $item.addClass("post-recent");
+
+                    if ($time.length && !$time.find(".post-recent-label").length) {
+                        $time.append(" <em class=\"post-recent-label\">- NYTT!</em>");
+                    }
+
+                    if ($item.is("li")) {
+                        $item.addClass("archive-post-recent");
+                    }
+                }
+            });
+        }
+
         var $img = $("img").on('load', updateImageWidth);
         function casperFullImg() {
             $img.each(updateImageWidth);
@@ -57,6 +79,7 @@
         casperFullImg();
         $(window).smartresize(casperFullImg);
 
+        markRecentPosts();
         $(".scroll-down").arctic_scroll();
 
     });

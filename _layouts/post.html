@@ -54,7 +54,7 @@ post_class: post-template
             <h5>Arkiv</h5>
             <ul>
                 {% for post in site.posts %}
-                    <li><span>{% include swedish-date.html date=post.date %}</span>  <a href="{{ post.url  | relative_url}}">{{ post.title }}</a></li>
+                    <li data-post-date="{{ post.date | date: "%Y-%m-%d" }}"><span>{% include swedish-date.html date=post.date %}</span>  <a href="{{ post.url  | relative_url}}">{{ post.title }}</a></li>
                 {% endfor %}
             </ul>
         </section>
