@@ -22,7 +22,7 @@ post_class: post-template
                 {% if page.categories.size > 0 %}
                     {{ page.categories | array_to_sentence_string | prepend: 'on ' }}
                 {% endif %}
-                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{% include swedish-date.html date=page.date %}</time>
             </section>
         </header>
 
@@ -37,7 +37,7 @@ post_class: post-template
         </header> -->
 
         <!-- <span class="post-meta">
-            <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+            <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{% include swedish-date.html date=page.date %}</time>
             {% if page.categories.size > 0 %}
                 {{ page.categories | array_to_sentence_string | prepend: 'on ' }}
             {% endif %}
@@ -54,7 +54,7 @@ post_class: post-template
             <h5>Arkiv</h5>
             <ul>
                 {% for post in site.posts %}
-                    <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url  | relative_url}}">{{ post.title }}</a></li>
+                    <li><span>{% include swedish-date.html date=post.date %}</span>  <a href="{{ post.url  | relative_url}}">{{ post.title }}</a></li>
                 {% endfor %}
             </ul>
         </section>
