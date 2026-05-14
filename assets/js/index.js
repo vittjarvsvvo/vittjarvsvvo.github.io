@@ -61,7 +61,7 @@
                     $item.addClass("post-recent");
 
                     if ($time.length && !$time.find(".post-recent-label").length) {
-                        $time.append(" <em class=\"post-recent-label\">- NYTT!</em>");
+                        $time.append(" <em class=\"post-recent-label\">- NYLIGEN!</em>");
                     }
 
                     if ($item.is("li")) {
