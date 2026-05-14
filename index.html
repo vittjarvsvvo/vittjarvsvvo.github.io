@@ -36,8 +36,11 @@ about: 'about'
 
     {% for post in paginator.posts %}
 
-    <article class="post">
+    <article class="post" data-post-date="{{ post.date | date: "%Y-%m-%d" }}">
         <header class="post-header">
+            <time class="post-date post-date-top" datetime="{{ post.date | date:"%Y-%m-%d" }}">
+                {% include swedish-date.html date=post.date %}
+            </time>
             <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         </header>
         <section class="post-excerpt">
@@ -51,9 +54,6 @@ about: 'about'
             {% if post.categories.size > 0 %} 
                 {{ post.categories | array_to_sentence_string | prepend: 'on ' }} 
             {% endif %}
-            <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
-                {{ post.date | date_to_string }}
-            </time> 
         </footer>
     </article>
 
